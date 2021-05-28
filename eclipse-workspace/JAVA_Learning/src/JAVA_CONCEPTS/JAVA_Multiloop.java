@@ -21,6 +21,7 @@ public class JAVA_Multiloop {
 			}
 		}
 		System.out.println("--------------------------------------------");
+		System.out.println("--------------------------------------------");
 
 		while (Num2 < 100) {
 //			System.out.println("the gvn num:" + Num2);
@@ -30,6 +31,7 @@ public class JAVA_Multiloop {
 				System.out.println("Odd numbers are:" + Num2);
 			}
 		}
+		System.out.println("-------------------------------------------------------");
 		System.out.println("-------------------------------------------------------");
 
 		while (Num3 < 100) {
@@ -42,5 +44,7 @@ public class JAVA_Multiloop {
 
 		}
 		System.out.println("--------------------------------------------------");
+		System.out.println("-------------------------------------------------------");
+
 	}
 }
