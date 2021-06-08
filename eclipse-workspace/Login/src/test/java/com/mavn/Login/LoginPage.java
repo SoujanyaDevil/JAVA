@@ -6,6 +6,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class LoginPage {
@@ -17,6 +18,7 @@ public class LoginPage {
 		driver.manage().window().maximize();
 		driver.get("https://phptravels.com/demo/");
 		driver.manage().timeouts().implicitlyWait(1000, TimeUnit.SECONDS);
+		driver.manage().deleteAllCookies();
 		
 		String Actual=driver.getCurrentUrl();
 		System.out.println(Actual);
@@ -30,8 +32,13 @@ public class LoginPage {
 		{
 			System.out.println("Both are not Matched");
 		}
-		Thread.sleep(3000);
-		driver.findElement(By.tagName("//a[contains(text(),'Login')]")).click();
+		Thread.sleep(10000);
+		System.out.println(",,,,,,,,,,,,,,,,,,,,,,,,,,,");
+		
+		WebElement login=driver.findElement(By.tagName("//a[contains(text(),'Login')]"));
+		login.click();
+		login.isDisplayed();
+		login.isEnabled();
 		
 		Set<String> S=driver.getWindowHandles();
 		Iterator<String> Iter=S.iterator();
